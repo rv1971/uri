@@ -37,9 +37,9 @@ class Uri
 
     protected const QUERY_OR_FRAGMENT_REGEX = '`^(?:(?:%[a-f0-9]{2})+|[a-z0-9-._~!$&\'"()\[\]*+,;=:@?/%]+)*$`i';
 
-    protected array $components;
+    protected $components;
 
-    protected ?string $str = null;
+    protected $str = null;
 
     /**
      * @param array $components An array of normalized components
@@ -943,7 +943,7 @@ class Uri
         return self::$KNOWN_PORTS[strtolower($scheme)] ?? null;
     }
 
-    protected static array $KNOWN_PORTS = [
+    protected static $KNOWN_PORTS = [
         'ftp' => 21,
         'ssh' => 22,
         'telnet' => 23,

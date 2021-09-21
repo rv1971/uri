@@ -98,7 +98,7 @@ REGEX;
         ],
     ];
 
-    protected string $uri;
+    protected $uri;
 
     /** @var bool|null|array */
     protected $parsed = false;
